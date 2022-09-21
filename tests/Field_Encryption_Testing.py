@@ -246,7 +246,7 @@ def test_pow_float():
 
 def test_pow_not_numberic():
     with pytest.raises(Exception):
-        md.modNum(3,7)**a
+        md.modNum(3,7)**'a'
 
 def test_pow_equals():
     p1 = md.modNum(3,7)
