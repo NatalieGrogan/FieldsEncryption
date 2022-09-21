@@ -321,14 +321,24 @@ def test_ellip_get_w():
 
 def test_ellip_set_w_valid():
     ec = ellip.EllipticCurve(0,0)
-    ec.set_w(5)
-    assert (ec.get_w()) == 5, "Didn't actually change value of w"
+    ec.set_w(9)
+    assert (ec.get_w()) == 9, "Didn't actually change value of w"
+
+def test_ellipt_set_w_invalid_small():
+    with pytest.raises(AssertionError):
+        ec = ellip.EllipticCurve(0,0)
+        ec.set_w(5)
+
+def test_ellipt_set_w_invalid_non_int():
+    with pytest.raises(AssertionError):
+        ec = ellip.EllipticCurve(0,0)
+        ec.set_w('a')
 
 def test_ellip_get_w_after_set_w_elsewhere():
     ec = ellip.EllipticCurve(0,0)
-    ec.set_w(5)
+    ec.set_w(9)
     ec2 = ellip.EllipticCurve(0,0)
-    assert (ec2.get_w() ) == 5, "Didn't change value of w for whole class"
+    assert (ec2.get_w() ) == 9, "Didn't change value of w for whole class"
 
 def test_ellip_cant_change_zero_inf():
     with pytest.raises(AttributeError):
