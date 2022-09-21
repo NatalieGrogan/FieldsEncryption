@@ -2,7 +2,6 @@ from . import modNum as md
 import random
 from math import floor, ceil, log2
 from . import EllipticCurve as elip
-import numpy as np
 
 
 class ElGamal:
@@ -84,7 +83,7 @@ class ElGamal:
         def __split(message):
             n = floor( log2( ElGamal.EC.get_prime()/ElGamal.EC.get_w() ) ) // 8 - 1
 
-            messageList = [message[i:i+n] for i in np.arange(0, len(message), n)]
+            messageList = [message[i:i+n] for i in range(0, len(message), n)]
             return messageList
 
         messages = __split(plain_text) 
