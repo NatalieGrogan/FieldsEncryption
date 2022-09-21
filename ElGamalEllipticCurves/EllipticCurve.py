@@ -139,6 +139,6 @@ class EllipticCurve:
 
     def set_w(self,new_w):
         assert type(new_w) == int, 'w must be of type int'
-        assert w>=7, 'w can not be to small or else there is significant risk of the encryption process failing'
+        assert new_w>=7, 'w can not be to small or else there is significant risk of the encryption process failing'
 
         EllipticCurve.__w = new_w
