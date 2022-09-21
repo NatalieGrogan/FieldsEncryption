@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ElGamalEllipticCurves
-Version: 0.1.10
+Version: 0.1.11
 Summary: Implements El Gamal scheme over Elliptic Curves for encryption. Overwrites Pythons inbuilt functions to allow modular arithmetic in finite fields and elliptic curve group operations by using the * symbol
 Author-email: Natalie Grogan <nataliecgrogan@gmail.com>
 License: Copyright (c) 2018 The Python Packaging Authority

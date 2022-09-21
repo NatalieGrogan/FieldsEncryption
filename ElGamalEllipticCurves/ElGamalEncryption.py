@@ -163,7 +163,7 @@ def encrypt(prime, public_key_g, public_key_h, plain_text):
     def __split(message):
         n = floor( log2( ElGamal.EC.get_prime()/ElGamal.EC.get_w() ) ) // 8 - 1
 
-        messageList = [message[i:i+n] for i in np.arange(0, len(message), n)]
+        messageList = [message[i:i+n] for i in range(0, len(message), n)]
         return messageList
 
     messages = __split(plain_text) # splits text into manageable chunks whose int representation is less than the prime of the group
